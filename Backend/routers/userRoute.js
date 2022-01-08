@@ -1,6 +1,6 @@
 const express = require("express")
-const { registerUser, loginUser, logoutUser, forgotPassword, resetPassword, getUserDetail, UpdateUserPassword, UpdateProfile } = require("../controllers/userController")
-const { AuthenticatedUser } = require("../middleware/auth")
+const { registerUser, loginUser, logoutUser, forgotPassword, resetPassword, getUserDetail, UpdateUserPassword, UpdateProfile, getAllUser, getSingleUser, updateUserRole, deleteUser } = require("../controllers/userController")
+const { AuthenticatedUser, AutheriosedRole } = require("../middleware/auth")
 
 const router = express.Router()
 
@@ -19,5 +19,13 @@ router.route("/user/getDetail").get(AuthenticatedUser, getUserDetail) // api for
 router.route("/user/UpdatePassword").post(AuthenticatedUser, UpdateUserPassword) // api for update password
 
 router.route("/user/UpdateProfile").post(AuthenticatedUser, UpdateProfile) // api for update profile
+
+router.route("/admin/AllUsers").get(AuthenticatedUser, AutheriosedRole("admin"), getAllUser) // api for get All users for admin
+
+router.route("/admin/UserDetail/:id").get(AuthenticatedUser, AutheriosedRole("admin"), getSingleUser) // api for get single user detail for admin
+
+router.route("/admin/UpdateRole/:id").put(AuthenticatedUser, AutheriosedRole("admin"), updateUserRole) // api for update user role for admin
+
+router.route("/admin/DeleteUser/:id").delete(AuthenticatedUser, AutheriosedRole("admin"), deleteUser) // api for get single user detail for admin
 
 module.exports = router
