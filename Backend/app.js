@@ -13,6 +13,9 @@ app.use("/api", product)
 const user = require("./routers/userRoute")
 app.use("/api", user)
 
+const order = require("./routers/orderRoute")
+app.use("/api", order)
+
 // middleware for error
 app.use(errorHandler)
 
