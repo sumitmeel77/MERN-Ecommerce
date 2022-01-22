@@ -29,6 +29,8 @@
     "mongoose": "^6.1.4",
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
+    "react-router-dom": "^6.2.1",
+    "react-star-rating-component": "^1.4.1",
     "validator": "^13.7.0"
   }
 }

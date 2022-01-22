@@ -11,7 +11,7 @@ export default function Header() {
                     {/* <div className="col-md-3">
                         <div className="d-flex form-inputs"> <input className="form-control" type="text" placeholder="Search product..." /><i class="fa fa-search"></i></div>
                     </div> */}
-                    <div className="col-md-3">order oline or call us 70-238-276-50</div>
+                    <div className="col-md-3">order online or call us 70-238-276-50</div>
                     <div className="col-md-2" style={{ "paddingLeft": "5%" }}>
                         <div className="d-flex d-none d-md-flex flex-row align-items-center"> <span className="shop-bag"><i class="fa fa-shopping-cart" style={{ "color": "black" }}></i></span>
                             <div className="d-flex flex-column ms-2"> <span className="qty">1 Product</span> <span className="fw-bold"><i class="fa fa-rupee"></i> 27.90</span> </div>
@@ -59,7 +59,7 @@ export default function Header() {
             top: 15px
         }
         .shop-bag {
-            background-color: #4ba838;
+            background-color: #fff;
             color: #fff;
             height: 40px;
             width: 40px;
