@@ -1,4 +1,5 @@
 import React from 'react';
+import RaectHelmet from '../component/Helmet';
 import ProductCard from '../component/ProductCard';
 import home_1 from '../images/home_1.jpg'
 
@@ -10,6 +11,7 @@ export default function Home() {
         ratings: 3,
     }
     return <>
+        <RaectHelmet title="Home" />
         <img className="d-none d-md-flex" src={home_1} width="100%" alt="" />
         <a href="/" style={{ "textDecoration": "None" }}><h2 className="homeHeading">FRUITS</h2></a>
         <div className='container'>
