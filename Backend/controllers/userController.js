@@ -9,6 +9,9 @@ exports.registerUser = catchAsyncError(
     async (req, res, next) => {
         const { name, email, password } = req.body;
 
+        console.log("name")
+        console.log(name)
+
         const user = await User.create({
             name,
             email,
@@ -28,6 +31,9 @@ exports.registerUser = catchAsyncError(
 )
 
 exports.loginUser = catchAsyncError(async (req, res, next) => {
+
+    // console.log("res res")
+    // console.log(res)
     const { email, password } = req.body;
 
     // checking if user has given password and email both

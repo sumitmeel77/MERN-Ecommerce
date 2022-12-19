@@ -27,11 +27,11 @@ const userSchema = new mongoose.Schema({
     ProfilePhoto: {
         public_id: {
             type: String,
-            required: true,
+            // required: true,
         },
         url: {
             type: String,
-            required: true,
+            // required: true,
         },
     },
     role: {
